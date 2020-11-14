@@ -146,9 +146,9 @@ class Quiz extends React.Component {
 }
 
 const documentName = document.currentScript.getAttribute('documentname');
-
+const data = JSON.parse(document.getElementById('data').innerHTML);
 // quizConfig must be configured in another script in SS
-const quiz = <Quiz config={quizConfig} />
+const quiz = <Quiz config={data} />
 ReactDOM.render(
     quiz,
     document.getElementById(documentName)
