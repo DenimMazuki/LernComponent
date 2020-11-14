@@ -149,6 +149,7 @@ const quizConfig = document.currentScript.getAttribute('quizconfig');
 const documentName = document.currentScript.getAttribute('documentname');
 console.log('---------> ', quizConfig);
 console.log('=========> ', documentName);
+
 // const quiz = <Quiz config={quizConfig} />
 // ReactDOM.render(
 //     quiz,
