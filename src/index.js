@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Form from "./Form";
 
 class QuizOption extends React.Component {
     constructor(props) {
