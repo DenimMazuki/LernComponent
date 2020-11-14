@@ -145,12 +145,10 @@ class Quiz extends React.Component {
     }
 }
 
-const quizConfig = document.currentScript.getAttribute('quizconfig');
 const documentName = document.currentScript.getAttribute('documentname');
 
-const quizJson = JSON.parse(quizConfig);
-
-const quiz = <Quiz config={quizJson} />
+// quizConfig must be configured in another script in SS
+const quiz = <Quiz config={quizConfig} />
 ReactDOM.render(
     quiz,
     document.getElementById(documentName)
