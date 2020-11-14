@@ -1,10 +1,5 @@
-<!DOCTYPE html>
- <html>
-   <head>
-   </head>
-   <body>
-    <div id="root"></div>
-    <script id="data" type="application/json">
+Structure of Quiz Data:
+```
       {
         "header": "Activity #1",
         "question": "How else can an investor profit from their stocks?",
@@ -27,7 +22,4 @@
         ],
         "correctId": 2
       }
-    </script>
-    <script src="https://cdn.jsdelivr.net/gh/DenimMazuki/LernComponent@test-4/dist/main.js" documentName="root"></script>
-   </body>
- </html>
+```
