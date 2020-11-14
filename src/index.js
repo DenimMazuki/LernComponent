@@ -144,8 +144,8 @@ class Quiz extends React.Component {
         );								
     }
 }
-const quizConfig = JSON.parse(document.currentScript.getAttribute('quizConfig'));
-const documentName = document.currentScript.getAttribute('documentName');
+const quizConfig = JSON.parse(document.currentScript.getAttribute('quizconfig'));
+const documentName = document.currentScript.getAttribute('documentname');
 const quiz = <Quiz config={quizConfig} />
 ReactDOM.render(
     quiz,
