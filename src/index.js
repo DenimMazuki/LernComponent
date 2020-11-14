@@ -27,7 +27,7 @@ class QuizOption extends React.Component {
     
     render() {
         const { hover } = this.state;
-        const {id, prompt, explanation, correctId, handleQuizOption, isSelected, isSubmitted, selectedId} = this.props;
+        const {id, prompt, correctId, isSelected, isSubmitted, selectedId} = this.props;
         const isCorrectResponse = id === correctId;
         const correctGreen = '#DBF5ED';
         const wrongRed = '#FFE0E0';
@@ -145,12 +145,10 @@ class Quiz extends React.Component {
     }
 }
 
-const quizConfig = document.currentScript.getAttribute('quizconfig');
 const documentName = document.currentScript.getAttribute('documentname');
-console.log('---------> ', quizConfig);
-console.log('=========> ', documentName);
-// const quiz = <Quiz config={quizConfig} />
-// ReactDOM.render(
-//     quiz,
-//     document.getElementById('root')
-// );
+const data = JSON.parse(document.getElementById('data').innerHTML);
+const quiz = <Quiz config={data} />
+ReactDOM.render(
+    quiz,
+    document.getElementById(documentName)
+);
