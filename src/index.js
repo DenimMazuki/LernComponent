@@ -147,11 +147,11 @@ class Quiz extends React.Component {
 
 const quizConfig = document.currentScript.getAttribute('quizconfig');
 const documentName = document.currentScript.getAttribute('documentname');
-console.log('---------> ', quizConfig);
-console.log('=========> ', documentName);
 
-// const quiz = <Quiz config={quizConfig} />
-// ReactDOM.render(
-//     quiz,
-//     document.getElementById('root')
-// );
+const quizJson = JSON.parse(quizConfig);
+
+const quiz = <Quiz config={quizJson} />
+ReactDOM.render(
+    quiz,
+    document.getElementById(documentName)
+);
